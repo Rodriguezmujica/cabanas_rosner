@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { getCabins, checkAvailability } from '../services/data';
 import { Modal, Button } from 'react-bootstrap';
@@ -34,7 +33,7 @@ const Home = () => {
         <div className="container my-5">
             <div className="row text-center mb-5">
                 <div className="col-12">
-                    <h1>Bienvenidos a Cabañas El Descanso</h1>
+                    <h1>Bienvenidos a Cabañas Rosner</h1>
                     <p className="lead">Relájate en medio de la naturaleza con todas las comodidades.</p>
                 </div>
             </div>
@@ -43,7 +42,27 @@ const Home = () => {
                 {cabins.map(cabin => (
                     <div className="col" key={cabin.id}>
                         <div className="card h-100 shadow-sm">
-                            <img src={cabin.image} className="card-img-top" alt={cabin.name} style={{ height: '200px', objectFit: 'cover' }} />
+                            {cabin.images && cabin.images.length > 0 ? (
+                                <div id={`carousel-${cabin.id}`} className="carousel slide" data-bs-ride="carousel">
+                                    <div className="carousel-inner">
+                                        {cabin.images.map((img, idx) => (
+                                            <div key={idx} className={`carousel-item ${idx === 0 ? 'active' : ''}`}>
+                                                <img src={img} className="d-block w-100" alt={`${cabin.name} ${idx + 1}`} style={{ height: '200px', objectFit: 'cover' }} />
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <button className="carousel-control-prev" type="button" data-bs-target={`#carousel-${cabin.id}`} data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Previous</span>
+                                    </button>
+                                    <button className="carousel-control-next" type="button" data-bs-target={`#carousel-${cabin.id}`} data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            ) : (
+                                <img src={cabin.image} className="card-img-top" alt={cabin.name} style={{ height: '200px', objectFit: 'cover' }} />
+                            )}
                             <div className="card-body">
                                 <h5 className="card-title">{cabin.name}</h5>
                                 <p className="card-text">{cabin.description}</p>
@@ -97,7 +116,9 @@ const Home = () => {
                         value={checkDate}
                         onChange={(e) => setCheckDate(e.target.value)}
                     />
-                    {availabilityMsg && <div className={`alert ${availabilityMsg.includes('✅') ? 'alert-success' : 'alert-danger'}`}>{availabilityMsg}</div>}
+                    {availabilityMsg && (
+                        <div className={`alert ${availabilityMsg.includes('✅') ? 'alert-success' : 'alert-danger'}`}>{availabilityMsg}</div>
+                    )}
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={() => setShowModal(false)}>

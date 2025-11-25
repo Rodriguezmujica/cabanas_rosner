@@ -15,7 +15,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
-                    <span className="h3">🏡 Cabañas El Descanso</span>
+                    <span className="h3">🏡 Cabañas Rosner</span>
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                     <span className="navbar-toggler-icon"></span>

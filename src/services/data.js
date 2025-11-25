@@ -5,12 +5,34 @@ const BOOKINGS_KEY = 'bookings_data';
 const INITIAL_CABINS = [
     {
         id: 1,
-        name: 'Cabaña del Bosque',
+        name: 'Cabaña 1',
         price: 50000,
-        capacity: 2,
-        image: '/imagenes/cabin_forest.png',
-        description: 'Acogedora cabaña rodeada de árboles nativos. Ideal para parejas.',
-        amenities: ['2 Personas', '1 Cama Matrimonial', 'Baño Privado']
+        capacity: 6,
+        image: '/imagenes/cabin1_main.jpg',
+        images: [
+            '/imagenes/cabin1_1.jpg',
+            '/imagenes/cabin1_2.jpg',
+            '/imagenes/cabin1_3.jpg'
+        ],
+        description: 'Cabaña 1 con amplias comodidades y vistas panorámicas.',
+        amenities: [
+            'Capacidad para 6',
+            'Aire acondicionado',
+            'Secador de pelo',
+            'Microondas',
+            'Horno',
+            'Escaleras',
+            'Tostadora',
+            'Conexión inalámbrica a internet',
+            'Escritorio',
+            'Mini Frigorífico',
+            'Calefacción',
+            'Combinación ducha y bañera/spa',
+            'Televisión por cable',
+            'Cocina completa',
+            'TV',
+            'Toallas'
+        ]
     },
     {
         id: 2,
