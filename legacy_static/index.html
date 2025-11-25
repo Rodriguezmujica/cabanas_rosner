@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="Cabañas, Arriendo, Vacaciones, Descanso, Naturaleza, Sur de Chile, Alojamiento, Turismo, Valdivia">
+  <meta name="description"
+    content="Disfruta de la naturaleza y el descanso en nuestras hermosas cabañas en el sur de Chile. Reserva tu estadía hoy mismo.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./scss/main.css">
+  <!-- <link rel="shortcut icon" href="./imagenes/Mi proyecto.png"> -->
+  <title>Inicio | Cabañas El Descanso</title>
+</head>
+
+<body>
+  <!-- encabezado-->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <!-- Placeholder for Logo -->
+          <span class="h3">🏡 Cabañas El Descanso</span>
+        </a>
+        <button class="navbar-toggler nav-border" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cabanas">Nuestras Cabañas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- contenido principal -->
+
+
+  <main>
+    <div class="container my-5">
+      <div class="row text-center mb-5">
+        <div class="col-12">
+          <h1>Bienvenidos a Cabañas El Descanso</h1>
+          <p class="lead">Relájate en medio de la naturaleza con todas las comodidades.</p>
+        </div>
+      </div>
+
+      <div id="cabanas" class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Cabin 1 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="./imagenes/cabin_forest.png" class="card-img-top" alt="Cabaña del Bosque"
+              style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">Cabaña del Bosque</h5>
+              <p class="card-text">Acogedora cabaña rodeada de árboles nativos. Ideal para parejas.</p>
+              <ul class="list-unstyled">
+                <li>👥 Capacidad: 2 Personas</li>
+                <li>🛏️ 1 Cama Matrimonial</li>
+                <li>🚿 Baño Privado</li>
+              </ul>
+              <p class="h5 text-success">$50.000 / noche</p>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+              <button class="btn btn-primary w-100" onclick="openBooking('Cabaña del Bosque', 50000)">Ver
+                Disponibilidad</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cabin 2 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="./imagenes/cabin_river.png" class="card-img-top" alt="Cabaña del Río"
+              style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">Cabaña del Río</h5>
+              <p class="card-text">Vista privilegiada al río. Espaciosa y confortable para familias.</p>
+              <ul class="list-unstyled">
+                <li>👥 Capacidad: 4 Personas</li>
+                <li>🛏️ 2 Habitaciones</li>
+                <li>🔥 Calefacción a Leña</li>
+              </ul>
+              <p class="h5 text-success">$80.000 / noche</p>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+              <button class="btn btn-primary w-100" onclick="openBooking('Cabaña del Río', 80000)">Ver
+                Disponibilidad</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cabin 3 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="./imagenes/cabin_family.png" class="card-img-top" alt="Cabaña Familiar"
+              style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">Cabaña Familiar</h5>
+              <p class="card-text">La opción perfecta para grupos grandes. Quincho incluido.</p>
+              <ul class="list-unstyled">
+                <li>👥 Capacidad: 6 Personas</li>
+                <li>🛏️ 3 Habitaciones</li>
+                <li>🍖 Quincho Privado</li>
+              </ul>
+              <p class="h5 text-success">$100.000 / noche</p>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+              <button class="btn btn-primary w-100" onclick="openBooking('Cabaña Familiar', 100000)">Ver
+                Disponibilidad</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="servicios" class="row my-5">
+        <div class="col-12 text-center">
+          <h2 class="mb-4">Nuestros Servicios</h2>
+        </div>
+        <div class="col-md-4 text-center">
+          <h3>🅿️</h3>
+          <h4>Estacionamiento</h4>
+          <p>Estacionamiento privado y seguro para cada cabaña.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h3>📶</h3>
+          <h4>Wi-Fi Gratis</h4>
+          <p>Conexión a internet de alta velocidad en todo el recinto.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h3>🌳</h3>
+          <h4>Áreas Verdes</h4>
+          <p>Amplios jardines y senderos para caminar.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Modal Placeholder -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="bookingModalLabel">Reservar Cabaña</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="booking-container">
+              <!-- Calendar and form will be injected here by JS -->
+              <p>Cargando calendario...</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" id="confirmBookingBtn">Confirmar Reserva</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer id="contacto" class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h3>Sobre Nosotros</h3>
+          <p>Cabañas El Descanso. Un lugar mágico en el sur de Chile para desconectarse y disfrutar de la naturaleza.
+          </p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h3>Contacto</h3>
+          <ul class="list-unstyled">
+            <li>📞 <a href="tel:+56912345678" class="text-white text-decoration-none">+56 9 1234 5678</a></li>
+            <li>📧 <a href="mailto:contacto@cabanaseldescanso.cl"
+                class="text-white text-decoration-none">contacto@cabanaseldescanso.cl</a></li>
+            <li>📍 Valdivia, Los Ríos, Chile</li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h3>Redes Sociales</h3>
+          <ul class="list-unstyled d-flex gap-3">
+            <li><a href="#" class="text-white">Facebook</a></li>
+            <li><a href="#" class="text-white">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <p class="mb-0">Derechos Reservados © 2023 | Cabañas El Descanso</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="./js/booking.js"></script>
+</body>
+
+</html>
